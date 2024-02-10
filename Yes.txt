@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YESSSSSSSSSSSSSSSSSSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7e1eb; /* Light pink */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden; /* Prevent scrollbars */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: #ffffff; /* White */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #e71d36; /* Red */
+        }
+        p {
+            color: #333333; /* Dark gray */
+        }
+        /* Adjust gif size */
+        .gif {
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>awwww</h1>
+        <p>I would've picked the same answer.</p>
+        <img src="teddy_bears.gif" class="gif" alt="Teddy bears hugging">
+    </div>
+</body>
+</html>

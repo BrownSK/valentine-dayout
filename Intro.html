@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Suad Valentine's Day</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7e1eb; /* Light pink */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden; /* Prevent scrollbars */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: #ffffff; /* White */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column; /* Display children in a column */
+            align-items: center; /* Center items horizontally */
+        }
+        h1 {
+            color: #e71d36; /* Red */
+        }
+        p {
+            color: #333333; /* Dark gray */
+        }
+        button {
+            background-color: #e71d36; /* Red */
+            color: #ffffff; /* White */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.5s ease;
+        }
+        button:hover {
+            background-color: #c70039; /* Darker red */
+        }
+        /* Style the image */
+        .couple-img {
+            width: 200px; /* Adjust image width as needed */
+            border-radius: 50%; /* Make image round */
+            margin-top: 20px; /* Add space between image and text */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Suad Valentine's Day</h1>
+        <p> I know, you didn't expect this at all from me, and I'm sorry it took a long time, but I needed time to build this and IT'S NOT EASY, OKAY?</p>
+        <button onclick="redirectToMain()">Apologies - Accepted</button>
+        <img src="couple.jpg" alt="Couple" class="couple-img">
+    </div>
+
+    <script>
+        function redirectToMain() {
+            window.location.href = "Main Website.html"; // Redirect to the main website page
+        }
+    </script>
+</body>
+</html>

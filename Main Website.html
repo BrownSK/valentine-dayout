@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Ask Out</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7e1eb; /* Light pink */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden; /* Prevent scrollbars */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* Position for heart emojis */
+        }
+        .container {
+            background-color: #ffffff; /* White */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            z-index: 1; /* Ensure container is above the hearts */
+        }
+        h1 {
+            color: #e71d36; /* Red */
+        }
+        button {
+            background-color: #e71d36; /* Red */
+            color: #ffffff; /* White */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.5s ease;
+        }
+        button:hover {
+            background-color: #c70039; /* Darker red */
+        }
+        .no-button {
+            background-color: #ff9999; /* Light red */
+            margin-right: 10px;
+        }
+        /* Heart emojis */
+        .heart {
+            position: absolute;
+            color: #e71d36; /* Red */
+            opacity: 0.5;
+            font-size: 20px;
+            transform: rotate(45deg);
+            animation: float 5s ease-in-out infinite, scatter 10s linear infinite;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        @keyframes scatter {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(50vw, 50vh);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Miss Thitivorada Srivarakul,</h1>
+	   <h1> Will you be my Valentine?</h1>
+        <p>MAKE SURE YOU PICK THE RIGHT ANSWER!</p>
+        <button class="yes-button" onclick="accept()">Yes</button>
+        <button class="no-button" onclick="rethink()">No</button>
+    </div>
+
+    <!-- Heart emojis -->
+    <script>
+        for (let i = 0; i < 80; i++) {
+            createHeart();
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            document.body.appendChild(heart);
+
+            const positionX = Math.random() * window.innerWidth;
+            const positionY = Math.random() * window.innerHeight;
+            const animationDelay = Math.random() * 10; // Random delay for the animation
+
+            heart.style.left = `${positionX}px`;
+            heart.style.top = `${positionY}px`;
+            heart.style.animationDelay = `${animationDelay}s`;
+        }
+    </script>
+
+    <script>
+        let clickCount = 0;
+
+        function accept() {
+            window.location.href = "yes.html"; // Redirect to the "Yes" page
+        }
+
+        function rethink() {
+            const noButton = document.querySelector('.no-button');
+            const yesButton = document.querySelector('.yes-button');
+
+            if (clickCount < 20) {
+                clickCount++;
+                yesButton.style.fontSize = `${16 + (clickCount * 2)}px`; // Increase font size
+                yesButton.style.transform = `scale(${1 + (clickCount * 0.05)})`; // Increase size
+            }
+
+            if (clickCount === 1) {
+                noButton.textContent = "Are you sure? Rethink";
+                yesButton.style.marginTop = '20px'; // Move "Yes" button down to make space for "No" button text
+            }
+        }
+    </script>
+</body>
+</html>
